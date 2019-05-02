@@ -1,0 +1,91 @@
+﻿<Window x:Class="KöfteciYusuf.Siparişlerim"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KöfteciYusuf"
+        mc:Ignorable="d"
+        Title="Siparişlerim" Height="900" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid Height="900">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="70" >
+            </RowDefinition>
+            <RowDefinition Height="50">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Background="#f6f6f6"></Border>
+        <Border Background="#e78314" Grid.Row="1">
+            <Button  Margin="325,8,15,10.4"  Background="{x:Null}">
+                <DockPanel>
+                    <Image Source="Images/box.png">
+
+                    </Image>
+                    <Label Content="Sepet" Foreground="White" Width="40">
+                    </Label>
+                </DockPanel>
+            </Button>
+        </Border>
+        <Image HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="170" Source="Images/Logo.png" Margin="0,16,0,0"/>
+        <Image HorizontalAlignment="Left" Height="61" Margin="311,10,0,0" VerticalAlignment="Top" Width="115" Source="Images/Menu.PNG"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="10,60.8,0,-41.4" Grid.Row="1" TextWrapping="Wrap" Text="Ürün Arayın" VerticalAlignment="Top" Width="328" FontSize="14"/>
+        <Image HorizontalAlignment="Left" Height="31" Margin="343,60.8,0,-41.4" Grid.Row="1" VerticalAlignment="Top" Width="73" RenderTransformOrigin="0.066,0.744" Source="Images/Search.PNG"/>
+
+        <Image HorizontalAlignment="Left" Height="26" Margin="21,157.8,0,-133.4" Grid.Row="1" VerticalAlignment="Top" Width="369" Source="Images/Siparişlerim.PNG"/>
+        <Image HorizontalAlignment="Left" Height="262" Margin="-7,1690.8,0,-1902.4" Grid.Row="1" VerticalAlignment="Top" Width="423" Source="Images/AltKisim.PNG"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="10,113.8,0,-87.4" Grid.Row="1" VerticalAlignment="Top" Width="396" Source="Images/Uyelik.PNG"/>
+        <ComboBox x:Name="Uyelik" Background="Orange" Foreground="Orange" Margin="10,113.8,27.2,-87.4" Grid.Row="1" BorderBrush="#FFEB2424" Opacity="0" >
+
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="Orange"/>
+                    <Setter Property="BorderBrush" Value="Orange"/>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+
+            <ComboBoxItem Name="Item1" >
+                <Button Background="Orange" x:Name="Bilgilerim"  >
+                    <DockPanel>
+                        <Image Height="25" Width="25" Source="Images/çarklar.png"></Image>
+                        <Label Content="Bilgilerim" Height="25"  />
+                    </DockPanel>
+                </Button>
+            </ComboBoxItem>
+            <ComboBoxItem Name="Item2" >
+                <Button   Background="Orange" x:Name="Adreslerim"   >
+                    <DockPanel>
+                        <Image Height="25" Width="25" Source="Images/adres.png"/>
+                        <Label Content="Adreslerim" Height="25"  />
+                    </DockPanel>
+                </Button>
+
+            </ComboBoxItem>
+            <ComboBoxItem Name="Item3"  >
+                <Button   Background="Orange" x:Name="SiparişlerimButton"   >
+                    <DockPanel>
+                        <Image Height="25" Width="25" Source="Images/sipariş.png"></Image>
+                        <Label Content="Siparişlerim" Height="25"  />
+                    </DockPanel>
+                </Button>
+            </ComboBoxItem>
+            <ComboBoxItem Name="Item4"  >
+                <Button   Background="Orange" x:Name="ÇıkışYap"  >
+                    <DockPanel>
+                        <Image Height="25" Width="25" Source="Images/logout.png"/>
+                        <Label Content="Çıkış Yap" Height="25"  />
+                    </DockPanel>
+                </Button>
+            </ComboBoxItem>
+
+
+        </ComboBox>
+        <Image HorizontalAlignment="Left" Height="25" Margin="21,201.8,0,-176.4" Grid.Row="1" VerticalAlignment="Top" Width="369" Source="Images/SiparişBaşlıklar.PNG"/>
+        <Image HorizontalAlignment="Left" Height="381" Margin="0,541.8,0,-872.4" Grid.Row="1" VerticalAlignment="Top" Width="443" Source="Images/AltKisim.PNG"/>
+
+    </Grid>
+
+
+</Window>

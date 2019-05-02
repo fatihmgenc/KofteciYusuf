@@ -1,0 +1,73 @@
+﻿<Window x:Class="KöfteciYusuf.ÜyeOl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KöfteciYusuf"
+        mc:Ignorable="d"
+        Title="ÜyeOl" Height="750" Width="450" WindowStartupLocation="CenterScreen">
+    <ScrollViewer>
+    <Grid Height="1255">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="70" >
+                </RowDefinition>
+                <RowDefinition Height="50">
+
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Border Background="#f6f6f6"></Border>
+            <Border Background="#e78314" Grid.Row="1">
+
+                <Button  Margin="325,8,15,10.4"  Background="{x:Null}">
+                    <DockPanel>
+                        <Image Source="Images/box.png">
+
+                        </Image>
+                        <Label Content="Sepet" Foreground="White" Width="40">
+                        </Label>
+                    </DockPanel>
+                </Button>
+            </Border>
+            <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="10,109.8,0,-90.4" Grid.Row="1" VerticalAlignment="Top" Width="185">
+                <DockPanel>
+                    <Image Source="Images/Uye_Ol_icon.png"></Image>
+                    <Label Content="Üye Ol" Foreground="White"></Label>
+
+                </DockPanel>
+            </Button>
+            <Button Padding="0" Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="231,110.8,0,-91.4" Grid.Row="1" VerticalAlignment="Top" Width="185" >
+                <DockPanel>
+                    <Image Source="Images/Giris_yap_icon.png"/>
+                    <Label Content="Giris Yap" Foreground="White"/>
+
+                </DockPanel>
+            </Button>
+
+            <Image HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="170" Source="Images/Logo.png" Margin="0,16,0,0"/>
+            <Image HorizontalAlignment="Left" Height="61" Margin="311,10,0,0" VerticalAlignment="Top" Width="115" Source="Images/Menu.PNG"/>
+            <TextBox HorizontalAlignment="Left" Height="31" Margin="10,60.8,0,-41.4" Grid.Row="1" TextWrapping="Wrap" Text="Ürün Arayın" VerticalAlignment="Top" Width="328" FontSize="14"/>
+            <Image HorizontalAlignment="Left" Height="31" Margin="343,60.8,0,-41.4" Grid.Row="1" VerticalAlignment="Top" Width="73" RenderTransformOrigin="0.066,0.744" Source="Images/Search.PNG"/>
+            <Image HorizontalAlignment="Left" Height="263" Margin="0,907.8,-16.6,-1120.4" Grid.Row="1" VerticalAlignment="Top" Width="443" Source="Images/AltKisim.PNG"/>
+            <Image HorizontalAlignment="Left" Height="40" Margin="10,159.8,0,-149.4" Grid.Row="1" VerticalAlignment="Top" Width="416" Source="Images/ÜyeOlBar.PNG"/>
+            <TextBox x:Name="AdKutusu"  HorizontalAlignment="Left" Height="23" Margin="10,220.8,0,-191.4" Grid.Row="1" TextWrapping="Wrap" Text="Adınız Soyadınız" VerticalAlignment="Top" Width="406" GotFocus="AdınızaGirildi"   />
+            <TextBox x:Name="MailKutusu" HorizontalAlignment="Left" Height="23" Margin="10,260.8,0,-227.4" Grid.Row="1" TextWrapping="Wrap" Text="Email Adresiniz" VerticalAlignment="Top" Width="406"/>
+            <TextBox x:Name="TelKutusu" HorizontalAlignment="Left" Height="23" Margin="10,300.8,0,-331.4" Grid.Row="1" TextWrapping="Wrap" Text="Telefon Numaranız" VerticalAlignment="Top" Width="406"/>
+            <TextBox x:Name="ParolaKutusu" HorizontalAlignment="Left" Height="23" Margin="10,340,0,-312.4" Grid.Row="1" TextWrapping="Wrap" Text="Parolanız" VerticalAlignment="Top" Width="406"/>
+            <ComboBox x:Name="AdrestipiBox" HorizontalAlignment="Left" Height="30" Margin="10,380,0,-357.4" Grid.Row="1" VerticalAlignment="Top" Width="406" IsEditable="True" IsReadOnly="True" Text="Adres Tipi" />
+            <ComboBox x:Name="İlBox" HorizontalAlignment="Left" Height="30" Margin="10,420,0,-407.4" Grid.Row="1" VerticalAlignment="Top" Width="406" IsEditable="True" IsReadOnly="True" Text="İl Seçiniz" SelectionChanged="İlBox_SelectionChanged" />
+            <ComboBox x:Name="IlçeBox" HorizontalAlignment="Left" Height="30" Margin="10,460,0,-457.4" Grid.Row="1" VerticalAlignment="Top" Width="406" IsEditable="True" IsReadOnly="True" Text="İlçe Seçiniz" SelectionChanged="İlBox_SelectionChanged" />
+            <TextBox HorizontalAlignment="Left" Height="25" Margin="10,500,0,-479.4" Grid.Row="1" TextWrapping="Wrap" Text="Mahalle" VerticalAlignment="Top" Width="406"/>
+            <TextBox HorizontalAlignment="Left" Height="25" Margin="10,540.8,0,-515.4" Grid.Row="1" TextWrapping="Wrap" Text="Sokak" VerticalAlignment="Top" Width="406"/>
+            <TextBox x:Name="kapınobox" HorizontalAlignment="Left" Height="25" Margin="10,580,0,-556.4" Grid.Row="1" TextWrapping="Wrap" Text="Apartman/Kapı no" VerticalAlignment="Top" Width="406"/>
+            <TextBox x:Name="DaireNoBox" Height="25" Margin="10,626.8,0,-601.4" Grid.Row="1" TextWrapping="Wrap" Text="Daire No" VerticalAlignment="Top" Width="406"/>
+            <TextBox HorizontalAlignment="Left" Margin="10,669.8,0,-720.4" Grid.Row="1" TextWrapping="Wrap" Text="Adres Tarifi" VerticalAlignment="Top" Height="101" Width="406" /> 
+            <Button Content="Üyeliği Tamamla" Foreground="White" Background="Orange"  HorizontalAlignment="Left" Height="41" Margin="56,807.8,0,-798.4" Grid.Row="1" VerticalAlignment="Top" Width="311" FontSize="14" FontWeight="Bold" Click="ÜyeOl_Click"/>
+
+
+
+
+        </Grid>
+    </ScrollViewer>
+</Window>

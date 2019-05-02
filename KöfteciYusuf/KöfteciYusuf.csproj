@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFB7AC0F-FB74-4C53-A834-15DB706621A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KöfteciYusuf</RootNamespace>
+    <AssemblyName>KöfteciYusuf</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Adreslerim.xaml.cs">
+      <DependentUpon>Adreslerim.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bilgilerim.xaml.cs">
+      <DependentUpon>Bilgilerim.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineÖdemeWindow.xaml.cs">
+      <DependentUpon>OnlineÖdemeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ParolamıDegistir.xaml.cs">
+      <DependentUpon>ParolamıDegistir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sepet.cs" />
+    <Compile Include="SepetimWindow.xaml.cs">
+      <DependentUpon>SepetimWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingeltonService.cs" />
+    <Compile Include="Siparişlerim.xaml.cs">
+      <DependentUpon>Siparişlerim.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UyeGiris.xaml.cs">
+      <DependentUpon>UyeGiris.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UyeMainWindow.xaml.cs">
+      <DependentUpon>UyeMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ÖdemeWindow.xaml.cs">
+      <DependentUpon>ÖdemeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ÜyeOl.xaml.cs">
+      <DependentUpon>ÜyeOl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Adreslerim.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bilgilerim.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="OnlineÖdemeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ParolamıDegistir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SepetimWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Siparişlerim.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UyeGiris.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UyeMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ÖdemeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ÜyeOl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Connected Services\ServiceReference1\service.wsdl" />
+    <None Include="Connected Services\ServiceReference1\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\altlogo.png" />
+    <Resource Include="Images\box.png" />
+    <Resource Include="Images\Ekmek_arasıköfte.jpg" />
+    <Resource Include="Images\Ekmek_Kadayıfı.jpg" />
+    <Resource Include="Images\Kangal_Sucuk.jpg" />
+    <Resource Include="Images\katagoriler.PNG" />
+    <Resource Include="Images\köfte.jpg" />
+    <Resource Include="Images\Köfte_sucuk.jpg" />
+    <Resource Include="Images\Logo.png" />
+    <Resource Include="Images\logout.png" />
+    <Resource Include="Images\Patates_kızartması.jpg" />
+    <Resource Include="Images\Piyaz.jpg" />
+    <Resource Include="Images\placeholder.png" />
+    <Resource Include="Images\Salata.jpg" />
+    <Resource Include="Images\Trileçe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Search.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Giris_Yap.PNG" />
+    <Resource Include="Images\Uye_Ol.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Uye_ol_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Giris_Yap_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FavoriÜrünler.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Sepete_Ekle.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add-to-the-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Kahvaltı_Tabağı.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icli_köfte.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ayran.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GirisYap.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sifremiunuttum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AltKisim.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Uyelik.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\adres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sipariş.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\çarklar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SiparişBaşlıklar.PNG" />
+    <Resource Include="Images\Siparişlerim.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ÜyeOlBar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BilgilerimiDüzenle.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HemenSiparişVer.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Sepet.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SepetBar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SepetimResim.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ÜstResim.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Adreslerim.PNG" />
+    <Resource Include="Images\HemenSiparisVer.PNG" />
+    <Resource Include="Images\yazı.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ÖdemeResim.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

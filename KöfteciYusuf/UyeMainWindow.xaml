@@ -1,0 +1,221 @@
+﻿<Window x:Class="KöfteciYusuf.UyeMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KöfteciYusuf"
+        mc:Ignorable="d"
+        Title="UyeMainWindow" Height="800" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <ScrollViewer>
+
+    <Grid Height="2012">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="70" >
+            </RowDefinition>
+            <RowDefinition Height="50">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Background="#f6f6f6"></Border>
+        <Border Background="#e78314" Grid.Row="1">
+            <Button  Margin="325,8,15,10.4"  Background="{x:Null}" Click="SepeteGitBut_click">
+                <DockPanel>
+                    <Image Source="Images/box.png">
+
+                    </Image>
+                    <Label Content="Sepet" Foreground="White" Width="40">
+                    </Label>
+                </DockPanel>
+            </Button>
+        </Border>
+        <Image HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="170" Source="Images/Logo.png" Margin="0,16,0,0"/>
+        <Image HorizontalAlignment="Left" Height="61" Margin="311,10,0,0" VerticalAlignment="Top" Width="115" Source="Images/Menu.PNG"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="10,60.8,0,-41.4" Grid.Row="1" TextWrapping="Wrap" Text="Ürün Arayın" VerticalAlignment="Top" Width="328" FontSize="14"/>
+        <Image HorizontalAlignment="Left" Height="31" Margin="343,60.8,0,-41.4" Grid.Row="1" VerticalAlignment="Top" Width="73" RenderTransformOrigin="0.066,0.744" Source="Images/Search.PNG"/>
+
+        <Image HorizontalAlignment="Left" Height="33" Margin="30,160.8,0,-143.4" Grid.Row="1" VerticalAlignment="Top" Width="359" Source="Images/FavoriÜrünler.PNG"/>
+        <Image HorizontalAlignment="Left" Height="93" Margin="30,217,0,-259.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/köfte.jpg"/>
+        <Button x:Name="KöfteSepetBut" Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,278.8,0,-259.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="KöfteSepetBut_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <ComboBox x:Name="köftegram" HorizontalAlignment="Left" Height="23" Margin="303,235.8,0,-208.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="ComboBox_SelectionChanged_1"/>
+        <TextBox x:Name="FiyatKöfte" HorizontalAlignment="Left" Height="23" Margin="178,235.8,0,-208.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False" />
+        <Image HorizontalAlignment="Left" Height="96" Margin="30,337.8,0,-378.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Ekmek_Kadayıfı.jpg"/>
+        <TextBox x:Name="FiyatEkmekKadayıfı" HorizontalAlignment="Left" Height="23" Margin="178,350.8,0,-323.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False" TextChanged="___No_Name__Copy_TextChanged"/>
+        <ComboBox x:Name="EkmekKAdayıfıPorsiyon"  Height="23" Margin="303,350.8,0,-323.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="EkmekKAdayıfıPorsiyon_SelectionChanged"/>
+            <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,402.8,0,-383.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="EkmekKadayifiSepetBut_Click" >
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,457.8,0,-498.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Icli_köfte.jpg"/>
+        <TextBox x:Name="FiyatİcliKöfte" HorizontalAlignment="Left" Height="23" Margin="178,476.8,0,-449.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="IclıKoftePors" HorizontalAlignment="Left" Height="23" Margin="303,476.8,0,-449.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="ComboBox_SelectionChanged_2"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,526.8,0,-507.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="İçliKöfte_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+            </DockPanel>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,580.8,0,-619.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Salata.jpg"/>
+        <TextBox x:Name="FiyatSalata" HorizontalAlignment="Left" Height="23" Margin="178,599.8,0,-572.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="SalataPors" HorizontalAlignment="Left" Height="23" Margin="303,599.8,0,-572.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="SalataPors_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,649.8,0,-630.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="Salata_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,700.8,0,-762.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Piyaz.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,820.8,0,-911.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Trileçe.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,940.8,0,-1045.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Köfte_sucuk.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="33,1060.8,0,-1110.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Patates_kızartması.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,1180.8,0,-1295.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Kahvaltı_Tabağı.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,1300.8,0,-1435.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Kangal_Sucuk.jpg"/>
+        <TextBox x:Name="FiyatPiyaz" HorizontalAlignment="Left" Height="23" Margin="178,720.8,0,-693.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="PiyazPors" HorizontalAlignment="Left" Height="23" Margin="303,720.8,0,-693.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="PiyazPors_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,769.8,0,-750.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="Piyaz_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <TextBox x:Name="FiyatTriliçe" HorizontalAlignment="Left" Height="23" Margin="178,840.8,0,-813.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="TriliçePors" HorizontalAlignment="Left" Height="23" Margin="303,840.8,0,-813.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="TriliçePors_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,889.8,0,-870.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="Triliçe_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <TextBox x:Name="FiyatKofteSucuk" HorizontalAlignment="Left" Height="23" Margin="178,950.8,0,-923.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="KöfteSucukPorsBox" HorizontalAlignment="Left" Height="23" Margin="303,950.8,0,-923.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="KöfteSucukPorsBox_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,999.8,0,-980.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="Sucuk_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <TextBox x:Name="FiyatPatates" HorizontalAlignment="Left" Height="23" Margin="178,1080.8,0,-1053.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="PatatesPorsBox" HorizontalAlignment="Left" Height="23" Margin="303,1080.8,0,-1053.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="PatatesPorsBox_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,1129.8,0,-1110.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="Patates_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <TextBox x:Name="FiyatKahvaltıTabagı" HorizontalAlignment="Left" Height="23" Margin="178,1200.8,0,-1173.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="KahvaltıPorsBox" HorizontalAlignment="Left" Height="23" Margin="303,1200.8,0,-1173.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="KahvaltıPorsBox_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,1249.8,0,-1230.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="KahvaltıTabağı_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <TextBox x:Name="FiyatKangalSucuk" HorizontalAlignment="Left" Height="23" Margin="178,1320.8,0,-1293.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="KangalSucukPorsBox" HorizontalAlignment="Left" Height="23" Margin="303,1320.8,0,-1293.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="KangalSucukPorsBox_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,1369.8,0,-1350.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="Kangal_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,1426.8,0,-1476.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Ekmek_arasıköfte.jpg"/>
+        <TextBox x:Name="FiyatEkmekArası" HorizontalAlignment="Left" Height="23" Margin="178,1446.8,0,-1419.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="EkmekArasıPorsBox" HorizontalAlignment="Left" Height="23" Margin="303,1446.8,0,-1419.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="EkmekArasıPorsBox_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,1495.8,0,-1476.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="EkmekA_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,1550.8,0,-1600.4" Grid.Row="1" VerticalAlignment="Top" Width="140" Source="Images/Ayran.jpg"/>
+        <TextBox x:Name="FiyatAyran" HorizontalAlignment="Left" Height="23" Margin="178,1570.8,0,-1543.4" Grid.Row="1" TextWrapping="Wrap" Text="FİYAT" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
+        <ComboBox x:Name="AyranPorsBox" HorizontalAlignment="Left" Height="23" Margin="303,1570.8,0,-1543.4" Grid.Row="1" VerticalAlignment="Top" Width="86" SelectionChanged="AyranPorsBox_SelectionChanged"/>
+        <Button  Background="#e78314" HorizontalAlignment="Left" Height="31" Margin="188,1619.8,0,-1600.4" Grid.Row="1" VerticalAlignment="Top" Width="185" Click="Ayran_Click">
+            <DockPanel>
+                <Image Source="Images/add-to-the-cart.png"/>
+                <Label Content="Sepete Ekle" Foreground="White"/>
+
+            </DockPanel>
+        </Button>
+        <Label Content="Köfte" HorizontalAlignment="Left" Height="28" Margin="257,207.8,0,-185.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Ekmek Kadayıfı" HorizontalAlignment="Left" Height="28" Margin="227,317.8,0,-295.4" Grid.Row="1" VerticalAlignment="Top" Width="117" FontSize="14" FontWeight="Bold"/>
+        <Label Content="İçli Köfte" HorizontalAlignment="Left" Height="28" Margin="247,443.8,0,-421.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Salata" HorizontalAlignment="Left" Height="28" Margin="257,566.8,0,-544.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Piyaz" HorizontalAlignment="Left" Height="28" Margin="257,687.8,0,-665.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Triliçe" HorizontalAlignment="Left" Height="28" Margin="257,812.8,0,-790.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Köfte-Sucuk" HorizontalAlignment="Left" Height="28" Margin="247,920.8,0,-898.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Patates" HorizontalAlignment="Left" Height="28" Margin="257,1047.8,0,-1025.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Kahvaltı Tabağı" HorizontalAlignment="Left" Height="28" Margin="225,1167.8,0,-1145.4" Grid.Row="1" VerticalAlignment="Top" Width="119" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Kangal Sucuk" HorizontalAlignment="Left" Height="28" Margin="238,1287.8,0,-1265.4" Grid.Row="1" VerticalAlignment="Top" Width="106" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Ekmek Arası" HorizontalAlignment="Left" Height="28" Margin="247,1418.8,0,-1396.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Ayran" HorizontalAlignment="Left" Height="28" Margin="257,1542.8,0,-1520.4" Grid.Row="1" VerticalAlignment="Top" Width="97" FontSize="14" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="262" Margin="-7,1690.8,0,-1902.4" Grid.Row="1" VerticalAlignment="Top" Width="423" Source="Images/AltKisim.PNG"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="10,113.8,0,-87.4" Grid.Row="1" VerticalAlignment="Top" Width="396" Source="Images/Uyelik.PNG"/>
+        <ComboBox x:Name="Uyelik" Background="Orange" Foreground="Orange" Margin="10,113.8,27.2,-87.4" Grid.Row="1" BorderBrush="#FFEB2424" Opacity="0" >
+
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="Orange"/>
+                    <Setter Property="BorderBrush" Value="Orange"/>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+
+            <ComboBoxItem Name="Item1" Selected="Bilgilerim_Selected">
+                <Button Background="Orange" x:Name="Bilgilerim"  >
+                    <DockPanel>
+                        <Image Height="25" Width="25" Source="Images/çarklar.png"></Image>
+                        <Label Content="Bilgilerim" Height="25"  />
+                    </DockPanel>
+                </Button>
+            </ComboBoxItem>
+            <ComboBoxItem Name="Item2" Selected="Adreslerim_Selected">
+                <Button   Background="Orange" x:Name="Adreslerim"   >
+                    <DockPanel>
+                        <Image Height="25" Width="25" Source="Images/adres.png"/>
+                        <Label Content="Adreslerim" Height="25"  />
+                    </DockPanel>
+                </Button>
+            
+            </ComboBoxItem>
+            <ComboBoxItem Name="Item3" Selected="siparişlerim_Selected"  >
+                <Button   Background="Orange" x:Name="SiparişlerimButton"   >
+                    <DockPanel>
+                        <Image Height="25" Width="25" Source="Images/sipariş.png"></Image>
+                        <Label Content="Siparişlerim" Height="25"  />
+                    </DockPanel>
+                </Button>
+            </ComboBoxItem>
+            <ComboBoxItem Name="Item4"  >
+                <Button   Background="Orange" x:Name="ÇıkışYap"   >
+                    <DockPanel>
+                        <Image Height="25" Width="25" Source="Images/logout.png"/>
+                        <Label Content="Çıkış Yap" Height="25"  />
+                    </DockPanel>
+                </Button>
+            </ComboBoxItem>
+          
+      
+        </ComboBox>
+
+    </Grid>
+
+    </ScrollViewer>
+</Window>
